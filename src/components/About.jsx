@@ -36,7 +36,7 @@ export default function About() {
             variants={fadeUp}
             initial="hidden"
             animate={inView ? 'show' : 'hidden'}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
             className="flex-1"
           >
             {/* Avatar placeholder */}

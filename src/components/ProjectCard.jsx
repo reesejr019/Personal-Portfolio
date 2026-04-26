@@ -5,7 +5,7 @@ export default function ProjectCard({ title, description, techStack, liveUrl, re
     <motion.div
       whileHover={{ y: -8 }}
       transition={{ duration: 0.25 }}
-      className="bg-surface border border-white/10 rounded-2xl overflow-hidden flex flex-col h-full hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 transition-all duration-300"
+      className="bg-surface border border-white/10 rounded-2xl overflow-hidden flex flex-col h-full hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 transition-[border-color,box-shadow] duration-300"
     >
       {/* Image / placeholder */}
       <div className="h-44 bg-gradient-to-br from-accent/20 to-cyan/10 flex items-center justify-center flex-shrink-0">

@@ -83,7 +83,7 @@ export default function Navbar() {
         >
           <motion.span
             animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            className="block w-6 h-0.5 bg-textPrimary origin-center transition-all"
+            className="block w-6 h-0.5 bg-textPrimary origin-center"
           />
           <motion.span
             animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
@@ -91,7 +91,7 @@ export default function Navbar() {
           />
           <motion.span
             animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            className="block w-6 h-0.5 bg-textPrimary origin-center transition-all"
+            className="block w-6 h-0.5 bg-textPrimary origin-center"
           />
         </button>
       </div>
