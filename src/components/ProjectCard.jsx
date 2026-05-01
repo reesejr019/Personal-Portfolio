@@ -34,7 +34,7 @@ export default function ProjectCard({ title, description, techStack, liveUrl, re
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 text-center py-2 rounded-lg bg-accent text-white text-sm font-medium hover:bg-accent/80 transition-colors"
+            className="flex-1 text-center py-2 rounded-lg bg-accent text-navy text-sm font-medium hover:bg-accent/80 transition-colors"
           >
             Live Demo
           </a>

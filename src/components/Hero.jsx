@@ -26,13 +26,13 @@ export default function Hero() {
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full"
-          style={{ background: 'radial-gradient(circle, #6c63ff44 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #e2e2e212 0%, transparent 70%)' }}
         />
         <motion.div
           animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
           className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full"
-          style={{ background: 'radial-gradient(circle, #00d4ff33 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #9ca3af15 0%, transparent 70%)' }}
         />
       </div>
 
@@ -67,7 +67,7 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => scrollTo('projects')}
-              className="w-full sm:w-auto px-8 py-3 rounded-full bg-accent text-white font-semibold hover:bg-accent/80 transition-all duration-200 hover:shadow-lg hover:shadow-accent/30"
+              className="w-full sm:w-auto px-8 py-3 rounded-full bg-accent text-navy font-semibold hover:bg-accent/80 transition-all duration-200 hover:shadow-lg hover:shadow-accent/30"
             >
               View Projects
             </button>

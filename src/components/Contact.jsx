@@ -208,7 +208,7 @@ export default function Contact() {
                 <motion.div variants={fadeUp}>
                   <button
                     type="submit"
-                    className="w-full py-3 rounded-xl bg-accent text-white font-semibold hover:bg-accent/80 transition-all duration-200 hover:shadow-lg hover:shadow-accent/30"
+                    className="w-full py-3 rounded-xl bg-accent text-navy font-semibold hover:bg-accent/80 transition-all duration-200 hover:shadow-lg hover:shadow-accent/30"
                   >
                     Send Message
                   </button>
