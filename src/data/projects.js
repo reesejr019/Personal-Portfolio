@@ -6,7 +6,7 @@ export const projects = [
       'A modern web page for a photography service, showcasing portfolio images, services offered, and contact information. Built with React and styled with Tailwind CSS.',
     image: null,
     techStack: ['React', 'Tailwind CSS'],
-    liveUrl: '#',
+    liveUrl: 'https://reesejr019.github.io/Photography-Service/',
     repoUrl: 'https://github.com/reesejr019/Photography-Service',
   },
   {
@@ -37,6 +37,6 @@ export const projects = [
     image: null,
     techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
     liveUrl: 'https://reesejr019.github.io/Personal-Portfolio/',
-    repoUrl: 'https://github.com',
+    repoUrl: 'https://github.com/reesejr019/Personal-Portfolio',
   },
 ]
