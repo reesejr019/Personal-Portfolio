@@ -37,10 +37,10 @@ export default function Projects() {
           variants={stagger}
           initial="hidden"
           animate={inView ? 'show' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="flex flex-wrap justify-center gap-6"
         >
           {projects.map((project) => (
-            <motion.div key={project.id} variants={fadeUp}>
+            <motion.div key={project.id} variants={fadeUp} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
               <ProjectCard {...project} />
             </motion.div>
           ))}

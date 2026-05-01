@@ -64,38 +64,38 @@ export default function Hero() {
             thoughtful design. Let&apos;s create something amazing together.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => scrollTo('projects')}
-              className="px-8 py-3 rounded-full bg-accent text-white font-semibold hover:bg-accent/80 transition-all duration-200 hover:shadow-lg hover:shadow-accent/30"
+              className="w-full sm:w-auto px-8 py-3 rounded-full bg-accent text-white font-semibold hover:bg-accent/80 transition-all duration-200 hover:shadow-lg hover:shadow-accent/30"
             >
               View Projects
             </button>
             <button
               onClick={() => scrollTo('contact')}
-              className="px-8 py-3 rounded-full border border-accent text-accent font-semibold hover:bg-accent/10 transition-all duration-200"
+              className="w-full sm:w-auto px-8 py-3 rounded-full border border-accent text-accent font-semibold hover:bg-accent/10 transition-all duration-200"
             >
               Contact Me
             </button>
           </motion.div>
         </motion.div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+      {/* Scroll indicator — absolute relative to the section, not the content div */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+        >
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-6 h-10 border-2 border-textMuted rounded-full flex justify-center pt-2"
           >
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-6 h-10 border-2 border-textMuted rounded-full flex justify-center pt-2"
-            >
-              <div className="w-1 h-2 bg-accent rounded-full" />
-            </motion.div>
+            <div className="w-1 h-2 bg-accent rounded-full" />
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

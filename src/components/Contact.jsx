@@ -109,7 +109,7 @@ export default function Contact() {
             variants={stagger}
             initial="hidden"
             animate={inView ? 'show' : 'hidden'}
-            className="lg:w-56 flex lg:flex-col gap-4"
+            className="lg:w-56 flex flex-wrap justify-center lg:flex-col lg:justify-start gap-4"
           >
             {socialLinks.map(({ label, href, icon }) => (
               <motion.a
