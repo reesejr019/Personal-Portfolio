@@ -26,7 +26,7 @@ export const projects = [
       'An online forum using Supabase to store and validate user posts. Users can create accounts, log in, and post messages to the forum   .',
     image: null,
     techStack: ['React', 'React Router', 'Context API', 'Tailwind CSS'],
-    liveUrl: '#',
+    liveUrl: 'https://reesejr019.github.io/MidTerm/',
     repoUrl: 'https://github.com/reesejr019/MidTerm',
   },
   {
@@ -36,7 +36,7 @@ export const projects = [
       'This very portfolio! Built with Vite + React, styled with Tailwind CSS, and animated with Framer Motion. Showcases projects, skills, and a working contact form.',
     image: null,
     techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-    liveUrl: '#',
+    liveUrl: 'https://reesejr019.github.io/Personal-Portfolio/',
     repoUrl: 'https://github.com',
   },
 ]
