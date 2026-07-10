@@ -5,7 +5,7 @@ export const projects = [
     description:
       'A modern web page for a photography service, showcasing portfolio images, services offered, and contact information. Built with React and styled with Tailwind CSS.',
     image: null,
-    techStack: ['React', 'Tailwind CSS'],
+    techStack: ['JavaScript', 'CSS', 'HTML'],
     liveUrl: 'https://reesejr019.github.io/Photography-Service/',
     repoUrl: 'https://github.com/reesejr019/Photography-Service',
   },
@@ -15,7 +15,7 @@ export const projects = [
     description:
       'An MCP application that allows Claude Code to save, list, and read notes on your computer as text files.',
     image: null,
-    techStack: ['React', 'Tailwind CSS', 'LocalStorage'],
+    techStack: ['JavaScript', 'CSS', 'HTML', 'LocalStorage'],
     liveUrl: '#',
     repoUrl: 'https://github.com/reesejr019/MCP-Server-Test',
   },
@@ -25,7 +25,7 @@ export const projects = [
     description:
       'An online forum using Supabase to store and validate user posts. Users can create accounts, log in, and post messages to the forum   .',
     image: null,
-    techStack: ['React', 'React Router', 'Context API', 'Tailwind CSS'],
+    techStack: ['JavaScript', 'HTML', 'CSS', 'Supabase'],
     liveUrl: 'https://reesejr019.github.io/MidTerm/',
     repoUrl: 'https://github.com/reesejr019/MidTerm',
   },
