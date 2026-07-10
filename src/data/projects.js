@@ -16,7 +16,7 @@ export const projects = [
       'An MCP application that allows Claude Code to save, list, and read notes on your computer as text files.',
     image: null,
     techStack: ['JavaScript', 'LocalStorage'],
-    liveUrl: '#',
+    liveUrl: null,
     repoUrl: 'https://github.com/reesejr019/MCP-Server-Test',
   },
   {

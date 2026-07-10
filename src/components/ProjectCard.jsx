@@ -30,14 +30,16 @@ export default function ProjectCard({ title, description, techStack, liveUrl, re
 
         {/* Links */}
         <div className="flex gap-3 mt-auto">
-          <a
-            href={liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 text-center py-2 rounded-lg bg-accent text-navy text-sm font-medium hover:bg-accent/80 transition-colors"
-          >
-            Live Demo
-          </a>
+          {liveUrl && (
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center py-2 rounded-lg bg-accent text-navy text-sm font-medium hover:bg-accent/80 transition-colors"
+            >
+              Live Demo
+            </a>
+          )}
           <a
             href={repoUrl}
             target="_blank"
