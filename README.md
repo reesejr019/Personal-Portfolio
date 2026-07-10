@@ -1,4 +1,4 @@
-# Personal Portfolio — Reese Johnson
+# Personal Portfolio — Rodney Reese
 
 A responsive, animated personal portfolio website built with React, Vite, Tailwind CSS, and Framer Motion.
 
