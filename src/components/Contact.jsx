@@ -1,5 +1,10 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
+import emailjs from '@emailjs/browser'
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -68,6 +73,8 @@ export default function Contact() {
   const [form, setForm] = useState(initialForm)
   const [errors, setErrors] = useState(initialErrors)
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [sendError, setSendError] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -75,16 +82,31 @@ export default function Contact() {
     if (errors[name]) setErrors(err => ({ ...err, [name]: '' }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const errs = validate(form)
     if (hasErrors(errs)) {
       setErrors(errs)
       return
     }
-    setSubmitted(true)
-    setForm(initialForm)
-    setErrors(initialErrors)
+
+    setSending(true)
+    setSendError('')
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        { from_name: form.name, from_email: form.email, message: form.message },
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      )
+      setSubmitted(true)
+      setForm(initialForm)
+      setErrors(initialErrors)
+    } catch {
+      setSendError("Something went wrong sending your message. Please try again or email me directly.")
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -205,12 +227,19 @@ export default function Contact() {
                   {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
                 </motion.div>
 
+                {sendError && (
+                  <motion.p variants={fadeUp} className="text-red-400 text-sm">
+                    {sendError}
+                  </motion.p>
+                )}
+
                 <motion.div variants={fadeUp}>
                   <button
                     type="submit"
-                    className="w-full py-3 rounded-xl bg-accent text-navy font-semibold hover:bg-accent/80 transition-all duration-200 hover:shadow-lg hover:shadow-accent/30"
+                    disabled={sending}
+                    className="w-full py-3 rounded-xl bg-accent text-navy font-semibold hover:bg-accent/80 transition-all duration-200 hover:shadow-lg hover:shadow-accent/30 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-none"
                   >
-                    Send Message
+                    {sending ? 'Sending...' : 'Send Message'}
                   </button>
                 </motion.div>
               </form>
