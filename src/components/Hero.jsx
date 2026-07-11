@@ -46,7 +46,7 @@ export default function Hero() {
             variants={fadeUp}
             className="text-5xl md:text-7xl font-extrabold text-textPrimary mb-4 leading-tight"
           >
-            Reese <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan">Rodney</span>
+            Rodney <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan">Reese</span>
           </motion.h1>
 
           <motion.p
